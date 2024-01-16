@@ -1,0 +1,317 @@
+*{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+
+:root{
+    --Rojo: rgb(220, 11, 11);
+    --Cabecera: transparent;
+    --Negro: rgb(4, 4, 4);
+    --Texto:rgb(198, 197, 197);
+}
+body{
+    background-color: var(--Negro);
+}
+
+@font-face {
+    font-family: 'fran';
+    src: url('fonts/Franchise.ttf');
+}
+
+@font-face {
+    font-family: 'adventure';
+    src: url('fonts/Adventure.otf');
+}
+
+@font-face {
+    font-family: 'altone';
+    src: url('fonts/AltoneTrial-Bold.ttf');
+}
+
+@keyframes cambioColor {
+    0%{ color:red;}
+    20%{color:rgb(255, 123, 0);}
+    40%{color:rgb(246, 234, 6);}
+    60%{color:rgb(98, 255, 0);}
+    80%{color:rgb(0, 255, 251);}
+    100%{color:rgb(255, 0, 225);}
+}
+
+.cabecera{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    background-color:var(--Cabecera);
+    height: 150px;
+}
+
+.gamestage{
+    color:var(--Rojo);
+    font-family: 'fran';
+    font-size:60px;
+    text-align: center;
+    margin-top:30px;
+    margin-left:30px;
+    cursor:pointer;
+}
+
+.gamestage h2:hover{
+    animation-name:cambioColor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.logo img{
+    width:200px;
+    height:150px;
+    cursor:pointer;
+}
+
+.navegacion {
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    text-align:center;
+    margin-top:60px;
+}
+
+.navegacion a{
+    margin-left:50px;
+    margin-right:50px;
+    text-decoration: none;
+    font-size:32px;
+    color: var(--Rojo);
+    font-family: 'adventure';
+    cursor:pointer;
+}
+
+.navegacion a:hover{
+    transform:scale(1.2);
+    animation-name:cambioColor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.slider-box{
+    width:700px;
+    height:360px;
+    margin:50px auto 0;
+    overflow:hidden;
+}
+
+.slider-box ul{
+    display:flex;
+    padding:0;
+    width:300%;
+    animation: slider 15s infinite alternate ease-in-out;
+}
+
+.slider-box li{
+    width:100%;
+    list-style:none;
+    position:relative;
+}
+
+.slider-box img{
+    width:100%;
+}
+
+.slider-box{
+    animation-name: cambioSombra;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+}
+
+.titulo h2{
+    color:var(--Texto);
+    text-align:center;
+    margin-top: 150px;
+    margin-bottom:50px;
+    font-size:40px;
+    font-family: 'altone';
+}
+
+.texto h4{
+    color:var(--Texto);
+    text-align:justify;
+    margin-right:100px;
+    margin-left:100px;
+    font-size:20px;
+    font-family: 'altone';
+}
+
+.pie p{
+    color:var(--Texto);
+    font-family: 'altone';
+    font-size:20px;
+    text-align:center;
+    margin-top:200px;
+    margin-bottom:20px;
+}
+
+.cabecera .intercambio-navegacion{
+
+    display:none; 
+    background-color: transparent;
+    font-size: 40px;
+    border: none;
+    color: var(--Rojo);
+
+}
+.cabecera .intercambio-navegacion:hover{
+
+    animation-name: cambioColor;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+    transform: scale(1.1);
+    cursor:pointer;
+    color: var(--Rojo);
+
+}
+
+.Mario .cont{
+    display:flex;
+    justify-content: space-around;
+}
+
+.Mario .cont img{
+    margin-top:80px;
+    margin-right: 80px;
+    height: 500px;
+    width:auto;
+}
+
+.Mario .cont h4{
+    color:var(--Texto);
+    text-align:justify;
+    margin-right:100px;
+    margin-left:100px;
+    font-size:20px;
+    font-family: 'altone';
+    margin-top: 200px;
+}
+
+.Mario h2{
+    color:var(--Texto);
+    text-align:center;
+    margin-top: 150px;
+    margin-bottom:50px;
+    font-size:40px;
+    font-family: 'altone';
+}
+
+.Pokemon h2{
+    color:var(--Texto);
+    text-align:center;
+    margin-top: 150px;
+    margin-bottom:50px;
+    font-size:40px;
+    font-family: 'altone';
+}
+
+.Pokemon .cont{
+    display:flex;
+    justify-content: space-around;
+}
+
+.Pokemon .cont img{
+    margin-top:80px;
+    margin-right: 80px;
+    height: 500px;
+    width:auto;
+}
+
+.Pokemon .cont h4{
+    color:var(--Texto);
+    text-align:justify;
+    margin-right:100px;
+    margin-left:100px;
+    font-size:20px;
+    font-family: 'altone';
+    margin-top: 200px;
+}
+
+.Mario h2{
+    color:var(--Texto);
+    text-align:center;
+    margin-top: 150px;
+    margin-bottom:50px;
+    font-size:40px;
+    font-family: 'altone';
+}
+
+@keyframes slider {
+
+    0%{margin-left:0;}
+    30%{margin-left:0;}
+
+    35%{margin-left:-100%;}
+    75%{margin-left:-100%;}
+
+    80%{margin-left:-200%;}
+    100%{margin-left:-200%;}
+    
+}
+
+@keyframes cambioSombra{
+    0%{ box-shadow: 0 0 50px red;}
+    20%{box-shadow: 0 0 50px rgb(255, 123, 0);}
+    40%{box-shadow: 0 0 50px rgb(246, 234, 6);}
+    60%{box-shadow: 0 0 50px rgb(98, 255, 0);}
+    80%{box-shadow: 0 0 50px rgb(0, 255, 251);}
+    100%{box-shadow: 0 0 50px rgb(255, 0, 225);}
+}
+
+@media screen and (max-width: 1180px) {
+    .texto h4 {
+        color: var(--Texto);
+        text-align: justify;
+        margin-right: 100px;
+        margin-left: 100px;
+        font-size: 20px;
+        font-family: 'altone';
+    }
+
+    .cabecera {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 20px;
+        bottom: 0;
+        flex-direction: row; 
+    }
+
+    .cabecera .navegacion {
+        display: none;
+        width: 100%;
+        background-color: var(--Cabecera);
+        flex-direction: column; 
+        top: 200px;
+        position: absolute;
+    }
+
+    .cabecera .intercambio-navegacion {
+        display: block;
+        padding-right: 20px;
+    }
+
+    .cabecera .navegacion--visible {
+        display: flex;
+        flex-direction: row;
+        align-items: center; 
+    }
+
+    .navegacion a {
+        width: 100%;  
+        text-align: center; 
+        margin: 0 0; 
+        margin-top:-40px;
+    }
+
+    .contenido {
+        margin-top: 200px;
+    }
+}
+
